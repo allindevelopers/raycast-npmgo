@@ -1,7 +1,7 @@
 {
 	"$schema": "https://www.raycast.com/schemas/extension.json",
 	"name": "npmgo",
-	"title": "NPM GO",
+	"title": "npmgo",
 	"description": "Allows to jump to different websites related to a NPM Package.",
 	"icon": "command-icon.png",
 	"author": "iamandrewluca",
@@ -15,8 +15,8 @@
 	"commands": [
 		{
 			"name": "index",
-			"title": "Show Typeahead Results",
-			"description": "Template for showing typeahead search with network results.",
+			"title": "npmgo",
+			"description": "Go to different websites related to a NPM Package.",
 			"mode": "no-view",
 			"arguments": [
 				{
