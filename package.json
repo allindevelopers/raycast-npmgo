@@ -17,7 +17,107 @@
 			"name": "index",
 			"title": "Show Typeahead Results",
 			"description": "Template for showing typeahead search with network results.",
-			"mode": "view"
+			"mode": "no-view",
+			"arguments": [
+				{
+					"name": "pkg",
+					"placeholder": "Package Name",
+					"type": "text",
+					"required": true
+				},
+				{
+					"name": "go",
+					"placeholder": "Destination",
+					"type": "dropdown",
+					"required": true,
+					"data": [
+						{
+							"title": "Bundlephobia",
+							"value": "Bundlephobia"
+						},
+						{
+							"title": "Changelog",
+							"value": "Changelog"
+						},
+						{
+							"title": "Repository Root",
+							"value": "Repository Root"
+						},
+						{
+							"title": "Homepage",
+							"value": "Homepage"
+						},
+						{
+							"title": "Issues",
+							"value": "Issues"
+						},
+						{
+							"title": "NPM",
+							"value": "NPM"
+						},
+						{
+							"title": "Pull/Merge Requests",
+							"value": "Pull/Merge Requests"
+						},
+						{
+							"title": "Releases",
+							"value": "Releases"
+						},
+						{
+							"title": "Source",
+							"value": "Source"
+						},
+						{
+							"title": "Tags",
+							"value": "Tags"
+						},
+						{
+							"title": "Unpkg",
+							"value": "Unpkg"
+						},
+						{
+							"title": "Versions",
+							"value": "Versions"
+						},
+						{
+							"title": "Yarn",
+							"value": "Yarn"
+						},
+						{
+							"title": "Code",
+							"value": "Code"
+						},
+						{
+							"title": "Trends",
+							"value": "Trends"
+						},
+						{
+							"title": "Graph",
+							"value": "Graph"
+						},
+						{
+							"title": "Snyk",
+							"value": "Snyk"
+						},
+						{
+							"title": "Socket",
+							"value": "Socket"
+						},
+						{
+							"title": "Packagephobia",
+							"value": "Packagephobia"
+						},
+						{
+							"title": "Package Size",
+							"value": "Package Size"
+						},
+						{
+							"title": "TypeScript Docs",
+							"value": "TypeScript Docs"
+						}
+					]
+				}
+			]
 		}
 	],
 	"dependencies": {
@@ -33,6 +133,7 @@
 		"@types/react": "18.2.27",
 		"eslint": "^8.51.0",
 		"prettier": "^3.1.1",
+		"tsx": "^4.7.0",
 		"typescript": "^5.2.2"
 	},
 	"scripts": {
@@ -40,7 +141,8 @@
 		"dev": "ray develop",
 		"fix-lint": "ray lint --fix",
 		"lint": "ray lint",
-		"publish": "npx @raycast/api@latest publish"
+		"publish": "npx @raycast/api@latest publish",
+		"postinstall": "tsx scripts/postinstall.ts"
 	},
 	"prettier": "@allindevelopers/prettier-config"
 }
